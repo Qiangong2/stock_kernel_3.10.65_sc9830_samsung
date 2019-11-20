@@ -447,8 +447,119 @@ dtb-$(CONFIG_MACH_DOVE) += dove-cm-a510.dtb \
 	dove-d2plug.dtb \
 	dove-d3plug.dtb \
 	dove-dove-db.dtb
+ifeq ($(CONFIG_CMA),y)
+dtb-$(CONFIG_MACH_SPX15) += sprd-scx15_sp7715ea_cma.dtb
+dtb-$(CONFIG_MACH_KANAS_W) += sprd-scx35_kanas_w_cma.dtb
+else
+dtb-$(CONFIG_MACH_SPX15) += sprd-scx15_sp7715ea.dtb
+dtb-$(CONFIG_MACH_KANAS_W) += sprd-scx35_kanas_w.dtb
+endif
+dtb-$(CONFIG_MACH_CORSICA_VE_DT) += sprd-scx15_corsica_ve.dtb
+dtb-$(CONFIG_MACH_SPX35) += sprd-scx35_sp8830ec.dtb
+dtb-$(CONFIG_MACH_SP8830GEA) += sprd-scx35_sp8830gea.dtb
+dtb-$(CONFIG_MACH_SP8730SEA) += sprd-scx35_sp8730sea.dtb
+dtb-$(CONFIG_MACH_SP7730GGA) += sprd-scx35_sp7730gga.dtb
+dtb-$(CONFIG_MACH_SP7731GGA_LC) += sprd-scx35_sp7731gga_lc.dtb
+dtb-$(CONFIG_MACH_SP7731GEA) += sprd-scx35_sp7731gea.dtb
+dtb-$(CONFIG_MACH_SP7731GEA_HD2) += sprd-scx35_sp7731gea_hd2.dtb
+dtb-$(CONFIG_MACH_SP7731GEA_HD) += sprd-scx35_sp7731gea_hd.dtb
+dtb-$(CONFIG_MACH_SP7731GEA_HDR) += sprd-scx35_sp7731gea_hdr.dtb
+dtb-$(CONFIG_MACH_SP7731GEA_HDR) += sprd-scx35_sp7731gea_hdr.dtb
+dtb-$(CONFIG_MACH_SP8730SEEA_QHD) += sprd-scx35_sp8730seea_qhd.dtb
+dtb-$(CONFIG_MACH_SP8730SEEA_JIG) += sprd-scx35_sp8730seea_jig.dtb
+dtb-$(CONFIG_MACH_SP7731GEA_QHD) += sprd-scx35_sp7731gea_qhd.dtb
+dtb-$(CONFIG_MACH_SP7731GEPIKE) += sprd-scx35_sp7731gepike.dtb
+dtb-$(CONFIG_MACH_SP7731GEA_FWVGA) += sprd-scx35_sp7731gea_fwvga.dtb
+dtb-$(CONFIG_MACH_SP7731GEAOPENPHONE) += sprd-scx35_sp7731geaopenphone.dtb
+dtb-$(CONFIG_MACH_TSHARKWSAMSUNG) += sprd-scx35_tsharkwsamsung.dtb
+dtb-$(CONFIG_MACH_PIKEAYOUNG2DTV) += sprd-scx35_pikeayoung2dtv.dtb
+dtb-$(CONFIG_MACH_CORE3) += sprd-scx35_core3.dtb
+dtb-$(CONFIG_MACH_SPX35LFPGA) += sprd-scx35l_sp9630fpga.dtb
+dtb-$(CONFIG_MACH_COREPRIMELITE) += sprd-scx35l_coreprimelite.dtb
+dtb-$(CONFIG_MACH_SHARKLS_Z3LTE) += sprd-scx35l_sharkls_z3lte.dtb
+dtb-$(CONFIG_MACH_SHARKL_J1POPLTE) += sprd-scx35l_sharkl_j1poplte.dtb
+dtb-$(CONFIG_MACH_ACE4NEOLTE) += sprd-scx35l_sharkl_ace4neolte.dtb
+dtb-$(CONFIG_MACH_J1ACEVELTE) += sprd-scx35l_sharkls_j1acevelte_rev00.dtb \
+				sprd-scx35l_sharkls_j1acevelte_rev01.dtb \
+				sprd-scx35l_sharkls_j1acevelte_rev02.dtb \
+				sprd-scx35l_sharkls_j1acevelte_rev03.dtb \
+				sprd-scx35l_sharkls_j1acevelte_rev04.dtb
+dtb-$(CONFIG_MACH_J1ACEVELTE_LTN_OPEN) += sprd-scx35l_sharkls_j1acevelte_ltn_open_rev00.dts \
+				sprd-scx35l_sharkls_j1acevelte_ltn_open_rev01.dts \
+				sprd-scx35l_sharkls_j1acevelte_ltn_open_rev02.dts \
+				sprd-scx35l_sharkls_j1acevelte_ltn_open_rev03.dts \
+				sprd-scx35l_sharkls_j1acevelte_ltn_open_rev04.dts
+dtb-$(CONFIG_MACH_J1MINI3G) += sprd-scx20-tizen_j1mini-r00.dtb \
+				sprd-scx20-tizen_j1mini-r01.dtb \
+				sprd-scx20-tizen_j1mini-r02.dtb
+dtb-$(CONFIG_MACH_J1MINILTE) += sprd-scx35l-tizen_j1minilte-r00.dtb \
+				sprd-scx35l-tizen_j1minilte-r01.dtb \
+				sprd-scx35l-tizen_j1minilte-r02.dtb \
+				sprd-scx35l-tizen_j1minilte-r03.dtb \
+				sprd-scx35l-tizen_j1minilte-r04.dtb
+ifeq ($(CONFIG_MACH_Z2_LTE_MEA),y)
+dtb-$(CONFIG_MACH_Z2_LTE_MEA) += sprd-scx35l-tizen_z2_lte_mea-r02.dtb \
+				sprd-scx35l-tizen_z2_lte_mea-r03.dtb
+else
+dtb-$(CONFIG_MACH_Z2_LTE) += sprd-scx35l-tizen_z2_lte-r00.dtb \
+				sprd-scx35l-tizen_z2_lte-r01.dtb \
+				sprd-scx35l-tizen_z2_lte-r02.dtb
+endif
+dtb-$(CONFIG_MACH_J3XLTE) += sprd-scx35l_sharkls_j3xlte_rev00.dtb \
+				sprd-scx35l_sharkls_j3xlte_rev01.dtb \
+				sprd-scx35l_sharkls_j3xlte_rev02.dtb \
+				sprd-scx35l_sharkls_j3xlte_rev03.dtb \
+				sprd-scx35l_sharkls_j3xlte_rev04.dtb \
+				sprd-scx35l_sharkls_j3xlte_rev05.dtb \
+				sprd-scx35l_sharkls_j3xlte_rev06.dtb \
+				sprd-scx35l_sharkls_j3xlte_rev07.dtb
+dtb-$(CONFIG_MACH_J3XNLTE) += sprd-scx35l_sharkls_j3xnlte_rev00.dtb \
+				sprd-scx35l_sharkls_j3xnlte_rev01.dtb \
+				sprd-scx35l_sharkls_j3xnlte_rev02.dtb \
+				sprd-scx35l_sharkls_j3xnlte_rev03.dtb \
+				sprd-scx35l_sharkls_j3xnlte_rev04.dtb \
+				sprd-scx35l_sharkls_j3xnlte_rev05.dtb
+dtb-$(CONFIG_MACH_GTEXSLTE) += sprd-scx35l_sharkls_gtexslte_rev00.dtb \
+				sprd-scx35l_sharkls_gtexslte_rev01.dtb \
+				sprd-scx35l_sharkls_gtexslte_rev02.dtb \
+				sprd-scx35l_sharkls_gtexslte_rev03.dtb
+dtb-$(CONFIG_MACH_SP9630EA3MN) += sprd-scx35l_sp9630ea3mn.dtb
+dtb-$(CONFIG_MACH_SP9630EA4MN) += sprd-scx35l_sp9630ea4mn.dtb
+dtb-$(CONFIG_MACH_SP9830AEA_5M_H100) += sprd-scx35l_sp9830aea_5m_h100.dtb
+dtb-$(CONFIG_MACH_SP9830AED_5M_H100) += sprd-scx35l_sp9830aed_5m_h100.dtb
+dtb-$(CONFIG_MACH_SP9830AEA_5M_VOLTE) += sprd-scx35l_sp9830aea_5m_volte.dtb
+dtb-$(CONFIG_MACH_SP9830AEB_5M_H100) += sprd-scx35l_sp9830aeb_5m_h100.dtb
+dtb-$(CONFIG_MACH_SP9830AEF_5M_VOLTE) += sprd-scx35l_sp9830aef_5m_volte.dtb
+ifeq ($(CONFIG_PRODUCT_SP9830AEC_4M_H110),y)
+dtb-$(CONFIG_MACH_SP9830AEC_4M_H100) += sprd-scx35l_sp9830aec_4m_h110.dtb
+else
+dtb-$(CONFIG_MACH_SP9830AEC_4M_H100) += sprd-scx35l_sp9830aec_4m_h100.dtb
+endif
+dtb-$(CONFIG_MACH_SP9830IEA_5M_H100) += sprd-scx35l_sp9830iea_5m_h100.dtb
+dtb-$(CONFIG_MACH_SP9830IEB_5M_H100) += sprd-scx35l_sp9830ieb_5m_h100.dtb
+dtb-$(CONFIG_MACH_SP9830IEC_4M_H100) += sprd-scx35l_sp9830iec_4m_h100.dtb
+dtb-$(CONFIG_MACH_SP9830IEA_4M_H100) += sprd-scx35l_sp9830iea_4m_h100.dtb
+dtb-$(CONFIG_MACH_SP9820FPGA) += sprd-scx35l_sp9820fpga.dtb
+dtb-$(CONFIG_MACH_SP9820EA) += sprd-scx35l_sp9820ea.dtb
+dtb-$(CONFIG_MACH_TSHARK2TABE) += sprd-scx35_tshark2tabe.dtb
+dtb-$(CONFIG_MACH_GRANDPRIMEVE3G) += sprd-scx35_grandprimeve3g.dtb \
+				sprd-scx35_grandprimeve3g_rev00.dtb
+dtb-$(CONFIG_MACH_GTEL3G) += sprd-scx35_gtel3g.dtb
+dtb-$(CONFIG_MACH_GRANDPRIME3G_VE) += sprd-scx35_grandprime3g_ve.dtb
+dtb-$(CONFIG_MACH_GRANDPRIME_DTV) += sprd-scx35_grandprime_dtv.dtb
+dtb-$(CONFIG_MACH_COREPRIME3G_VE) += sprd-scx35_coreprime3g_ve.dtb
+dtb-$(CONFIG_MACH_COREPRIMEVE3G) += sprd-scx35_coreprimeve3g.dtb
+dtb-$(CONFIG_MACH_SP7720EA) += sprd-scx20_sp7720ea.dtb
+dtb-$(CONFIG_MACH_SP7720EB) += sprd-scx20_sp7720eb.dtb
 
-targets += dtbs dtbs_install
+DTB_NAMES := $(subst $\",,$(CONFIG_BUILD_ARM_APPENDED_DTB_IMAGE_NAMES))
+ifneq ($(DTB_NAMES),)
+DTB_LIST := $(addsuffix .dtb,$(DTB_NAMES))
+else
+DTB_LIST := $(dtb-y)
+endif
+
+targets += dtbs
 targets += $(dtb-y)
 endif
 
@@ -459,4 +570,4 @@ dtbs: $(addprefix $(obj)/, $(dtb-y))
 
 clean-files := *.dtb
 
-dtbs_install: $(addsuffix _dtbinst_, $(dtb-y))
+#dtbs_install: $(addsuffix _dtbinst_, $(dtb-y))
