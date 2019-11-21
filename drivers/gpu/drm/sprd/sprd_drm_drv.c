@@ -43,6 +43,7 @@
 struct sprd_drm_gem_info_data {
 	struct drm_file *filp;
 	struct seq_file *m;
+	struct export dma_buf;
 };
 
 static int sprd_drm_gem_one_info(int id, void *ptr, void *data)
